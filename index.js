@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+app.use(express.bodyParser());
 var port = process.env.PORT || 8080;
 
 var data = {
@@ -14,7 +15,7 @@ app.post('/',(req,res)=>{
                    "fulfillmentMessages":[ { "text": { "text": [ "his number is 9537759063" ] } } ] ,
                    "source":"" } */
   console.log("this is fucking dangerous");
-  console.log(req.body.query_text);
+  console.log(req.body);
   let responseObj={
    "fulfillmentText":"",
    "fulfillmentMessages":[
