@@ -2,6 +2,12 @@ const express = require('express')
 const app = express()
 var port = process.env.PORT || 8080;
 
+var data = {
+"malav":{"name":"Malav Desai","number":"9988998899", "email":"malav.desai@sterlite.com","desk":"C-79"},
+"desai":{"name":"Malav Desai","number":"9988998899", "email":"malav.desai@sterlite.com","desk":"C-79"},
+"vicky":{"name":"Vicky Singh","number":"9988008899", "email":"vicky.singh@sterlite.com","desk":"C-80"},
+}
+
 app.post('/',(req,res)=>{
   //let response = "his number is 9537759063"; //Default response from the webhook to show it’s working
   /*let responseObj={ "fulfillmentText":"his number is 9537759063" ,
@@ -13,10 +19,10 @@ app.post('/',(req,res)=>{
       {
         "text" : {
          "text":[
-            "Malav Desai",
-           "9988998899",
-           "malav.desai@sterlite.com",
-           "C-79"
+            data.malav.name,
+           data.malav.number,
+           data.malav.email,
+           data.malav.desk
          ]
         }
       }
