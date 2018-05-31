@@ -14,7 +14,7 @@ app.post('/',(req,res)=>{
                    "fulfillmentMessages":[ { "text": { "text": [ "his number is 9537759063" ] } } ] ,
                    "source":"" } */
   let responseObj={
-   "fulfillmentText":"his number is 9537759063",
+   "fulfillmentText":req.body.parameters.fields[1],
    "fulfillmentMessages":[
       {
         "text" : {
