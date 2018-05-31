@@ -17,7 +17,7 @@ app.post('/',(req,res)=>{
                    "fulfillmentMessages":[ { "text": { "text": [ "his number is 9537759063" ] } } ] ,
                    "source":"" } */
   console.log("this is fucking dangerous");
-  console.log(req.body.parameters.name);
+  console.log(req.body.queryResult.parameters.name);
   let responseObj={
    "fulfillmentText":"",
    "fulfillmentMessages":[
