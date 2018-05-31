@@ -37,7 +37,7 @@ jobs:
   staging:
     branch: master
     heroku:
-      appname: foo-bar-123
+      appname: codefest-alpha
 
 
 
