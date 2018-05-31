@@ -19,8 +19,8 @@ jobs:
     steps:
       - checkout
       
-       - run:
-          name: Update npm
+      - run:
+          name: Install npm
           command: 'sudo npm install -g npm@latest'
 
       # Download and cache dependencies
@@ -32,7 +32,7 @@ jobs:
 
       - run: yarn install
 
-     - run:
+      - run:
           name: Install npm wee
           command: npm install
       
