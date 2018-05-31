@@ -13,7 +13,7 @@ app.post('/',(req,res)=>{
   /*let responseObj={ "fulfillmentText":"his number is 9537759063" ,
                    "fulfillmentMessages":[ { "text": { "text": [ "his number is 9537759063" ] } } ] ,
                    "source":"" } */
-  console.log(req);
+  console.log(req.body);
   let responseObj={
    "fulfillmentText":"",
    "fulfillmentMessages":[
