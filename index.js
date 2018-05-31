@@ -24,8 +24,8 @@ app.post('/',(req,res)=>{
       {
         "text" : {
          "text":[
-            data.malav.name,
-           data.malav.number,
+            data[req.body.queryResult.parameters.name].name,
+           data[req.body.queryResult.parameters.name].number,
            data.malav.email,
            data.malav.desk
          ]
