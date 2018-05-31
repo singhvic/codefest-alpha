@@ -11,8 +11,8 @@ app.post('/',(req,res)=>{
    "fulfillmentText":"his number is 9537759063",
    "fulfillmentMessages":[
       {
-        "text" : {
-         "contact":[
+        "contact" : {
+         "text":[
             "9537759063"
          ]
         }
