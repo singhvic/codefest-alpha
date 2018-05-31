@@ -7,7 +7,6 @@ var port = process.env.PORT || 8080;
 
 var data = {
 "malav":{"name":"Malav Desai","number":"9988998899", "email":"malav.desai@sterlite.com","desk":"C-79"},
-"desai":{"name":"Malav Desai","number":"9988998899", "email":"malav.desai@sterlite.com","desk":"C-79"},
 "vicky":{"name":"Vicky Singh","number":"9988008899", "email":"vicky.singh@sterlite.com","desk":"C-80"},
 }
 
@@ -26,8 +25,33 @@ app.post('/',(req,res)=>{
          "text":[
             data[req.body.queryResult.parameters.name].name,
            data[req.body.queryResult.parameters.name].number,
-           data.malav.email,
-           data.malav.desk
+           data[req.body.queryResult.parameters.name].email,
+           data[req.body.queryResult.parameters.name].desk
+         ]
+        }
+      }
+   ],
+   "source":""
+}
+  return res.json(responseObj);});
+
+app.post('/update/number',(req,res)=>{
+  //let response = "his number is 9537759063"; //Default response from the webhook to show it’s working
+  /*let responseObj={ "fulfillmentText":"his number is 9537759063" ,
+                   "fulfillmentMessages":[ { "text": { "text": [ "his number is 9537759063" ] } } ] ,
+                   "source":"" } */
+ console.log(req.body.queryResult.parameters.name);
+  data[req.body.queryResult.parameters.name].number=req.body.queryResult.parameters.number;
+  let responseObj={
+   "fulfillmentText":"",
+   "fulfillmentMessages":[
+      {
+        "text" : {
+         "text":[
+            data[req.body.queryResult.parameters.name].name,
+           data[req.body.queryResult.parameters.name].number,
+           data[req.body.queryResult.parameters.name].email,
+           data[req.body.queryResult.parameters.name].desk
          ]
         }
       }
