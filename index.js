@@ -10,7 +10,7 @@ var data = {
 "vicky":{"name":"Vicky Singh","number":"9988008899", "email":"vicky.singh@sterlite.com","desk":"C-80"},
 "vijayrajsinh":{"name":"Vijayrajsinh Sarvaiya","number":"9067596979", "email":"vijayrajsinh.sarvaiya@sterlite.com","desk":"C-42"},
 "khushbu":{"name":"Khushbu Chauhan","number":"9988008200", "email":"khushbu.chauhan@sterlite.com","desk":"C-65"},
-"soniya":{"name":"Soniya"Patel,"number":"998800557", "email":"soniya.patel@sterlite.com","desk":"C-24"},
+"soniya":{"name":"Soniya Patel","number":"998800557", "email":"soniya.patel@sterlite.com","desk":"C-24"},
 "Umang":{"name":"Umang Goswami","number":"8800889922", "email":"umang.goswami@sterlite.com","desk":"C-62"},
 "jay":{"name":"Jay Makadiya","number":"9055655846", "email":"jay.makadiya@sterlite.com","desk":"C-29"},
 "nirmal":{"name":"Nirmal Kachhia","number":"9988045579", "email":"nirmal.kachhia@sterlite.com","desk":"C-61"},
