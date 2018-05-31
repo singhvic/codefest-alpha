@@ -44,11 +44,11 @@ app.post('/',(req,res)=>{
 }
   return res.json(responseObj);});
 
-app.post('/update/number',(req,res)=>{
+/*app.post('/update/number',(req,res)=>{
   //let response = "his number is 9537759063"; //Default response from the webhook to show it’s working
   /*let responseObj={ "fulfillmentText":"his number is 9537759063" ,
                    "fulfillmentMessages":[ { "text": { "text": [ "his number is 9537759063" ] } } ] ,
-                   "source":"" } */
+                   "source":"" } *
  console.log(req.body.queryResult.parameters.name);
   data[req.body.queryResult.parameters.name].number=req.body.queryResult.parameters.number;
   let responseObj={
@@ -66,7 +66,7 @@ app.post('/update/number',(req,res)=>{
       }
    ],
    "source":""
-}
+}*/
   return res.json(responseObj);});
 
 app.listen(port);
