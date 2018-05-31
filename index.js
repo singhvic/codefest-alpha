@@ -11,9 +11,12 @@ app.post('/',(req,res)=>{
    "fulfillmentText":"his number is 9537759063",
    "fulfillmentMessages":[
       {
-        "contact" : {
+        "text" : {
          "text":[
-            "9537759063"
+            "Malav Desai",
+           "9988998899",
+           "malav.desai@sterlite.com",
+           "C-79"
          ]
         }
       }
