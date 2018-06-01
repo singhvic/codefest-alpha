@@ -25,7 +25,7 @@ app.post('/',(req,res)=>{
                    "fulfillmentMessages":[ { "text": { "text": [ "his number is 9537759063" ] } } ] ,
                    "source":"" } */
   console.log("this is fucking dangerous");
-  console.log(req.body.queryResult.parameters.name);
+  console.log(req.body);
   if (req.body.queryResult.parameters.index == 5) {
       console.log("updating");
       data[req.body.queryResult.parameters.name].number=req.body.queryResult.parameters.number;
