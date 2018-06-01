@@ -28,7 +28,7 @@ app.post('/',(req,res)=>{
   console.log(req.body);
   if (req.body.queryResult.parameters.index == 5) {
       console.log("updating");
-      data[req.body.queryResult.parameters.name].number=req.body.queryResult.parameters.number;
+      data[req.body.queryResult.parameters.name].number=req.body.queryResult.parameters.pnumber;
   }
   let responseObj={
    "fulfillmentText":"",
