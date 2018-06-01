@@ -26,7 +26,8 @@ app.post('/',(req,res)=>{
                    "source":"" } */
   console.log("this is fucking dangerous");
   console.log(req.body.queryResult.parameters.name);
-  if (req.body.queryResult.parameters.name == 5) {
+  if (req.body.queryResult.parameters.index == 5) {
+      console.log("updating");
       data[req.body.queryResult.parameters.name].number=req.body.queryResult.parameters.number;
   }
   let responseObj={
