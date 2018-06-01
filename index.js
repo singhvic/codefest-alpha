@@ -26,6 +26,9 @@ app.post('/',(req,res)=>{
                    "source":"" } */
   console.log("this is fucking dangerous");
   console.log(req.body.queryResult.parameters.name);
+  if (req.body.queryResult.parameters.name == 5) {
+      data[req.body.queryResult.parameters.name].number=req.body.queryResult.parameters.number;
+  }
   let responseObj={
    "fulfillmentText":"",
    "fulfillmentMessages":[
@@ -43,30 +46,5 @@ app.post('/',(req,res)=>{
    "source":""
 }
   return res.json(responseObj);});
-
-/*app.post('/update/number',(req,res)=>{
-  //let response = "his number is 9537759063"; //Default response from the webhook to show it’s working
-  /*let responseObj={ "fulfillmentText":"his number is 9537759063" ,
-                   "fulfillmentMessages":[ { "text": { "text": [ "his number is 9537759063" ] } } ] ,
-                   "source":"" } *
- console.log(req.body.queryResult.parameters.name);
-  data[req.body.queryResult.parameters.name].number=req.body.queryResult.parameters.number;
-  let responseObj={
-   "fulfillmentText":"",
-   "fulfillmentMessages":[
-      {
-        "text" : {
-         "text":[
-            data[req.body.queryResult.parameters.name].name,
-           data[req.body.queryResult.parameters.name].number,
-           data[req.body.queryResult.parameters.name].email,
-           data[req.body.queryResult.parameters.name].desk
-         ]
-        }
-      }
-   ],
-   "source":""
-}
-  return res.json(responseObj);});*/
 
 app.listen(port);
